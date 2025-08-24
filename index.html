@@ -4,110 +4,121 @@
   <meta charset="UTF-8">
   <title>Optimierte HTML Tabelle für den Druck</title>
   <style>
-    body {
-      background: linear-gradient(120deg, #f0f4f8 0%, #e0e7ef 100%);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-    }
+body {
+  background: linear-gradient(120deg, #f0f4f8 0%, #e0e7ef 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
 
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      max-width: 100%;
-      table-layout: fixed;
-      background: #fff;
-      box-shadow: 0 8px 30px rgba(60, 60, 90, 0.15), 0 2px 8px rgba(60, 60, 90, 0.1);
-      border-radius: 16px;
-      overflow: hidden;
-    }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 95vw; /* passt sich dem Bildschirm an */
+  table-layout: fixed;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(60, 60, 90, 0.15), 0 2px 8px rgba(60, 60, 90, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+}
 
-    th, td {
-      border: 1px solid #d1d5db;
-      padding: 18px 12px;
-      text-align: center;
-      font-size: 1.2em;
-      word-wrap: break-word;
-      height: 100px; /* Vergrößerte Höhe für alle Zeilen */
-    }
+th, td {
+  border: 1px solid #d1d5db;
+  padding: 18px 12px;
+  text-align: center;
+  font-size: 1.2em;
+  word-wrap: break-word;
+  height: 100px; /* Vergrößerte Höhe für alle Zeilen */
+}
 
-    th {
-      font-weight: 600;
-      letter-spacing: 1px;
-      font-size: 2.5em;
-    }
+th {
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 2.5em;
+}
 
-    /* Farben für die Überschriften */
-    .blue {
-      color: #007bff;
-    }
+/* Farben für die Überschriften */
+.blue {
+  color: #007bff;
+}
 
-    .red {
-      color: #dc3545;
-    }
+.red {
+  color: #dc3545;
+}
 
-    .green {
-      color: #28a745;
-    }
+.green {
+  color: #28a745;
+}
 
-    /* Hintergrundfarben für die jeweiligen Spalten */
-    td:nth-child(1) {
-      color: #007bff;
-    }
+/* Hintergrundfarben für die jeweiligen Spalten */
+td:nth-child(1) {
+  color: #007bff;
+}
 
-    td:nth-child(2) {
-      color: #dc3545;
-    }
+td:nth-child(2) {
+  color: #dc3545;
+}
 
-    td:nth-child(3) {
-      color: #28a745;
-    }
+td:nth-child(3) {
+  color: #28a745;
+}
 
-    td {
-      color: #374151;
-    }
+/* Standardfarbe für Zellen, falls nichts anderes greift */
+td {
+  color: #374151;
+}
 
-    a {
-      /* width: 20%; */
-      font-size: 8px !important;
-      position: absolute;
-      bottom: 5px;
-      right: 10px;
-      color: #007bff;
-      text-decoration: none;
-    }
+/* Link nur für Display sichtbar */
+a {
+  margin-top: 18px;
+  font-size: 1.2em;
+  color: #007bff;
+  text-decoration: none;
+  text-align: center;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+a:hover {
+  text-decoration: underline;
+}
 
-    /* Druckoptimierungen */
-    @media print {
-      body {
-        background: none;
-      }
+/* Druckoptimierungen */
+@media print {
+  body {
+    background: none;
+  }
 
-      table {
-        width: 100%;
-        page-break-before: always;
-        box-shadow: none;
-        border-radius: 0;
-      }
+  table {
+    width: 100%;
+    page-break-before: always;
+    box-shadow: none;
+    border-radius: 0;
+  }
 
-      th, td {
-        padding: 12px;
-        height: 70px; /* Höhe im Druckmodus */
-      }
+  th, td {
+    padding: 12px;
+    height: 70px; /* Höhe im Druckmodus */
+  }
 
-      /* Papierformat und Ausrichtung */
-      @page {
-        size: A4;
-        margin: 10mm;
-      }
-    }
+  a {
+    font-size: 8px !important;
+    text-align: left;
+  }
+
+  /* Papierformat und Ausrichtung */
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  /* Überschriften auch im Druck farbig lassen */
+  th.blue { color: #007bff !important; }
+  th.red { color: #dc3545 !important; }
+  th.green { color: #28a745 !important; }
+}
+
   </style>
 </head>
 <body>

@@ -41,30 +41,36 @@ th {
   font-size: 2.5em;
 }
 
-/* Farben für die Überschriften */
+/* Neue, harmonische Farben für die Überschriften */
 .blue {
-  color: #007bff;
+  color: #2563eb; /* kräftiges Blau */
 }
 
 .red {
-  color: #dc3545;
+  color: #e11d48; /* kräftiges Pink-Rot */
 }
 
 .green {
-  color: #28a745;
+  color: #10b981; /* kräftiges Türkis-Grün */
 }
 
-/* Hintergrundfarben für die jeweiligen Spalten */
+/* Dezente Hintergrundfarben für die jeweiligen Spalten */
 td:nth-child(1) {
-  color: #007bff;
+  background: #e0e7ff; /* sehr helles Blau */
+  color: #1e40af;
+  font-weight: 600;
 }
 
 td:nth-child(2) {
-  color: #dc3545;
+  background: #ffe4e6; /* sehr helles Rosa */
+  color: #be123c;
+  font-weight: 600;
 }
 
 td:nth-child(3) {
-  color: #28a745;
+  background: #d1fae5; /* sehr helles Türkis-Grün */
+  color: #047857;
+  font-weight: 600;
 }
 
 /* Standardfarbe für Zellen, falls nichts anderes greift */
@@ -73,7 +79,8 @@ td {
 }
 
 table tr:nth-child(even) td {
-  background: #f9fafb; /* leichte Zebra-Schattierung */
+  /* Zebra-Schattierung bleibt erhalten, aber mit Transparenz */
+  background: rgba(243,244,246,0.7);
 }
 
 table tr:hover td {
@@ -157,6 +164,20 @@ a {
     background: none !important;
   }
 
+  /* Dezente Farben auch im Druck für Spalten */
+  td:nth-child(1) {
+    background: #e0e7ff !important;
+    color: #1e40af !important;
+  }
+  td:nth-child(2) {
+    background: #ffe4e6 !important;
+    color: #be123c !important;
+  }
+  td:nth-child(3) {
+    background: #d1fae5 !important;
+    color: #047857 !important;
+  }
+
   .ausblenden{
     display: none;
   }
@@ -168,9 +189,9 @@ a {
   }
 
   /* Überschriften auch im Druck farbig lassen */
-  th.blue { color: #007bff !important; }
-  th.red { color: #dc3545 !important; }
-  th.green { color: #28a745 !important; }
+  th.blue { color: #2563eb !important; }
+  th.red { color: #e11d48 !important; }
+  th.green { color: #10b981 !important; }
 }
 
   </style>

@@ -29,7 +29,7 @@
       border: 1px solid #d1d5db;
       padding: 18px 12px;
       text-align: center;
-      font-size: 2em;
+      font-size: 1.2em;
       word-wrap: break-word;
       height: 100px; /* Vergrößerte Höhe für alle Zeilen */
     }
@@ -70,6 +70,20 @@
       color: #374151;
     }
 
+    a {
+      /* width: 20%; */
+      font-size: 8px !important;
+      position: absolute;
+      bottom: 5px;
+      right: 10px;
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     /* Druckoptimierungen */
     @media print {
       body {
@@ -98,22 +112,28 @@
 </head>
 <body>
 
-  <table>
-    <tr>
-      <th class="blue">Der</th>
-      <th class="red">Die</th>
-      <th class="green">Das</th>
-    </tr>
-    <tr><td>Männliche Personen, Tiere, Berufe</td><td>Weibliche Personen, Tiere, Berufe</td><td>-chen</td></tr>
-    <tr><td>Tage und Monate</td><td>-ei</td><td>-lein</td></tr>
-    <tr><td>Jahreszeiten, Himmelsrichtungen</td><td>-heit <br> -keit</td><td>-erl</td></tr>
-    <tr><td>Alkohol</td><td>-schaft</td><td>-ment</td></tr>
-    <tr><td>-ling</td><td>-ung</td><td>-nis</td></tr>
-    <tr><td>-or</td><td>-tät <br> -ik</td><td>-um</td></tr>
-    <tr><td>-us</td><td>-ur</td><td>Infinitiv</td></tr>
-    <tr><td>-er</td><td>-ion</td><td></td></tr>
-    <tr><td></td><td>-e</td><td></td></tr>
-  </table>
+  <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+    <table>
+      <tr>
+        <th class="blue">Der</th>
+        <th class="red">Die</th>
+        <th class="green">Das</th>
+      </tr>
+      <tr><td>Männliche Personen, Tiere, Berufe</td><td>Weibliche Personen, Tiere, Berufe</td><td>-chen</td></tr>
+      <tr><td>Tage und Monate</td><td>-ei</td><td>-lein</td></tr>
+      <tr><td>Jahreszeiten, Himmelsrichtungen</td><td>-heit <br> -keit</td><td>-erl</td></tr>
+      <tr><td>Alkohol</td><td>-schaft</td><td>-ment</td></tr>
+      <tr><td>-ling</td><td>-ung</td><td>-nis</td></tr>
+      <tr><td>-or</td><td>-tät <br> -ik</td><td>-um</td></tr>
+      <tr><td>-us</td><td>-ur</td><td>Infinitiv</td></tr>
+      <tr><td>-er</td><td>-ion</td><td></td></tr>
+      <tr><td></td><td>-e</td><td></td></tr>
+    </table>
+
+    <a href="https://asya2009.github.io/Deutsche-Artikeln-und-Endungen/" style="margin-top: 24px; font-size: 1.2em;">
+      https://asya2009.github.io/Deutsche-Artikeln-und-Endungen
+    </a>
+  </div>
 
 </body>
 </html>
